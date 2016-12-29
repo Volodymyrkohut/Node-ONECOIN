@@ -1,0 +1,59 @@
+<%layout("index_news")%>
+		
+			<div id="inner">		
+			<% for(var i = 0; i < data.length; i++){ %>
+				<div class="elem">
+				<h2><%- data[i].title %></h2>
+				<div class="description">
+					<img class="img" src="/images/news/<%- data[i].img %>" width="40" height="40"  style="margin:5px;">
+					<p><%- data[i].description %></p>
+					<a href="/news/open/<%- data[i]._id %>">Перейти до перегляду ......</a>
+					<br><br>
+				</div>
+				<p class="author"> автор -<%- data[i].author %><p>
+				<div class="data"> дата -<%- data[i].date.getDate() %>- <%-data[i].date.getMonth() + 1%> <%- data[i].date.getFullYear()%> </div>
+				
+				<br>
+				<br>
+				</div>
+		
+								
+
+			<% }%>
+			
+
+			<p style="font:14px bold gray;" > поточна сторінка - №<%- page%><p><br>
+			<p style="font:14px bold gray;"> кількість статей - <%- total%><p><br>
+			</div>
+			<!-- навігація сторінок -->
+
+			<% for(var i = 0; i < pages; i++){ %>
+				<a href="/news/<%-cat%>?param=<%- i + 1%>"><%- i + 1%></a>
+			<% } %>
+
+
+			
+				<!--кількість статей в сторінці-->
+			<select id="foo">
+				<option value="/news/<%-cat%>?limit=5">5</option>
+				<option value="/news/<%-cat%>?limit=10">10</option>
+				<option value="/news/<%-cat%>?limit=20">20</option>
+				<option value="/news/<%-cat%>?limit=30">30</option>
+			</select>
+			
+
+<script >
+
+
+// To do
+
+var elem = document.getElementById("foo");
+
+elem.onchange = function() {
+		this.selected = "selected"
+    	 window.location.href =  this.value
+
+};
+
+</script>
+	

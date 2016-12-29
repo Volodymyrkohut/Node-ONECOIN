@@ -1,0 +1,14 @@
+<% layout("index_news")%>
+
+
+	<p><%- data.title %></p>
+	<p><%- data.content%></p>
+	<p><%- data.author %><p>
+	<p><%- data.date.getDate() %>-<%-data.date.getMonth() + 1%> <%-data.date.getFullYear()%></p>
+
+
+	
+
+<% block('description', data.meta_d ) %>
+
+<% block('keywords', data.meta_k ) %>

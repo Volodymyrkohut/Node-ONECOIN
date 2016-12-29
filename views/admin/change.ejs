@@ -1,0 +1,40 @@
+<% layout("../index_news") %>
+
+<form method="post" action="/admin/change" name="form">
+<select id="select" name="cat" value="<%- data.cat%>">
+	<option value="0">Onecoin</option>
+	<option value="1">Bitcoin</option>
+	<option value="2">Litecoin</option>
+	<option value="3">Інші</option>
+</select>
+	<br>
+		<label  for="title">Заголовок</label>
+	<input type="text" name="title"  value="<%- data.title%>">
+	<br>
+
+	<br>
+	<label  for="meta_d">meta_d</label>
+		<input type="text" name="meta_d" value="<%- data.meta_d%>">
+	<br>
+	<br>
+	<label  for="meta_k" >meta_k</label>
+		<input type="text" name="meta_k" value="<%- data.meta_k%>">
+	<br>
+
+
+	<br>
+	<label  for="author">Автор</label>
+		<input type="text" name="author" value="<%- data.author%>">
+	<br>
+	<br>
+	<label  for="description">Коротке описання</label>
+		<input type="text" name="description" value="<%- data.description%>">
+	<br>
+	<br>
+		<label  for="content">Текст</label>
+		<textarea name="content" ><%- data.content%></textarea>
+	<input type="hidden" name="secret" value="<%- data._id%>">
+
+	<input type="submit" name="submit">
+
+</form>

@@ -1,0 +1,56 @@
+
+#c2{
+background-color: white;
+color: black;
+}
+
+
+#c{
+border: 1px solid black;
+background-color: black;
+color: white;
+box-shadow: inset 0px 0px 0px , 0px 5px 10px grey;
+
+}
+
+.begin li{
+    float:left;
+    margin-right: 20px;
+    margin-top: 10px;
+    list-style: none;
+    /*outline: 1px solid red;*/
+}
+
+.begin li ul li{
+    margin-bottom: 10px;
+    float:none;
+}
+
+.begin li a{
+    display: block;
+    width: 70px;
+    height: 15px;
+    background-color: white;
+    text-decoration: none;
+    font: 14px Arial;
+    color: black;
+    padding: 4px;
+    box-shadow: inset 0px 0px 0px , 0px 5px 10px black;
+}
+
+
+.begin li ul{
+    -webkit-padding-start: 0px;  /* рівняє список рівно з батьківським списком*/
+}
+
+
+.begin li ul{
+    /*visibility: hidden;*/
+    display: none;
+}
+
+.begin{
+    position: absolute;
+    left:300px;
+
+}

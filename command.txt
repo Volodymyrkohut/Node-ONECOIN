@@ -1,0 +1,46 @@
+use mydb 	--- создає базу даних , переключає базу яку потрібно використовувати
+show dbs 	--- показує всі бази даних
+show collections --- показує колекції
+
+
+db.nameCollection.save({a:1}); --- добавляє в колекцію
+x = {name : "volodymyr",male :"man"};
+db.nameCollection.insert(x)
+
+---update---/////////////////////////////////////////////////////////////////////////////////////
+db.collection.update({name:volodymyr},{$set:{male:"person"}})
+
+
+
+при вході на url буде обновлятися на 1 більше. Dec на одиницю менше
+db.collection.update({"url":"www.example.com"},
+	{"$inc": {"pageviews":1}})
+db.collection.update({"url":"www.exampl.com"},
+	{"$dec":{"pageviews" : 10}})
+///////////////////////////////////////////////////////////////////////////////////////////////
+---rename---
+db.collection.update({name: "volodimir"},{$rename:{name:fullName})
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+db.nameCollection.find()       --- покаже колекцію
+db.nameCollection.remove()     --- очистить колекцію , але не удалить
+db.nameCollection.drop()       --- удалить колекцію
+
+
+---Удаляємо базу даних---
+
+use mydb 
+db.dropDatabase()
+
+
+
+
+/////////////////////////////////////////
+backup and restore
+
+---backup----
+mongodump  --site
+
+
+---restore---
+mongorestore --db site dump/site 

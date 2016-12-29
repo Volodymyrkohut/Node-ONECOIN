@@ -1,0 +1,14 @@
+.auth li {
+    margin-right: 20px;
+     float: right;
+     /*display: block;*/
+    width: 70px;
+    height: 15px;
+   /*cursor: pointer;*/
+    background-color: white;
+    text-decoration: none;
+    font: 14px Arial;
+    color: black;
+    padding: 4px;
+    /*box-shadow: inset 0px 0px 0px , 0px 5px 10px black;*/
+}

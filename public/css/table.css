@@ -1,0 +1,35 @@
+.img{
+	float:left;
+}
+
+
+.author{
+	font:15px bold arial;
+	color:gray;
+	float:left;
+
+}
+
+.description{
+	
+	border-left:3px solid red; 
+	border-bottom:1px solid black; 
+	padding:10px;
+}
+
+.centerTable {
+	border:1px solid gray;
+	width:861px;
+	padding:5px;
+}
+
+
+.elem{
+	position: relative;
+}
+
+.data{
+	position: absolute;
+	right:20px;
+}
+

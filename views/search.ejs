@@ -1,0 +1,31 @@
+
+
+<%layout("index_news")%>
+		
+
+			<% for(var i = 0; i < data.length; i++){ %>
+				<div class="elem">
+				<h2><%- data[i].title %></h2>
+				<div class="description">
+					<img class="img" src="/images/news/<%- data[i].img %>" width="40" height="40"  style="margin:5px;">
+					<p><%- data[i].description %></p>
+					<a href="/news/open/<%- data[i]._id %>">Перейти до перегляду ......</a>
+					<br><br>
+				</div>
+				<p class="author"> автор -<%- data[i].author %><p>
+				<div class="data"> дата -<%- data[i].date.getDate() %>-<%-data[i].date.getMonth() + 1%> <%- data[i].date.getFullYear()%> </div>
+				
+				<br>
+				<br>
+				</div>
+				
+								
+
+			<% }%>
+			
+
+			
+			
+	
+
+			

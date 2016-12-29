@@ -1,0 +1,49 @@
+<% layout("index_news")%>
+
+
+<div id="content">
+	<ul>
+		<li id="set">Hello</li>	
+	</ul>
+ </div>
+
+<div id="bar"> </div>
+<form id="form" action="" onsubmit="return false">
+ 	 <textarea id="text" required placeholder="Свій текст"></textarea>
+ 	 <input type="submit" id="send">
+</form>
+
+	<script src='/socket.io/socket.io.js'></script>
+  	<script src="/js/chat-client.js"></script>
+
+
+<style>
+#content{
+/*	background-image: url("../images/gold.jpg");
+	opacity: 0.4;*/
+	width: 500px;
+	height: 400px;
+	margin: 20px;
+	border: solid 1px #999;
+	overflow-y: scroll;
+	 float:left;
+}
+
+
+#bar{
+	margin-left:30px; 
+	width: 200px; 
+	height: 400px; 
+	margin: 20px; 
+	border: solid 1px #999;
+	overflow-y: scroll;
+}
+
+#text{
+	width: 500px; 
+	height: 100px;
+	margin: 20px;
+}
+
+
+</style>

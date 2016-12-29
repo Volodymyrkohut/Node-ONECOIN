@@ -1,0 +1,80 @@
+<% layout("index")%>
+<div style="position:relative;"><%- partial("main")%></div>
+
+
+
+
+<div class="position">
+
+
+	<% 	array.list.forEach(function(feed){ %>
+	
+	<div class="weather">
+		
+	  	<p style="color:white;" class="numDay" ><%- new Date( feed.dt * 1000 ).getDay()%></p>  <!--День тижня-->
+	  	 <p style="color:white;"><%- new Date( feed.dt * 1000 ).getDate()%> - 
+	  		<%- new Date( feed.dt * 1000 ).getMonth() + 1%> -
+	  		<%- new Date( feed.dt * 1000 ).getFullYear()%>
+	  	</p> 
+	  	
+	  	<img src="http://openweathermap.org/img/w/<%-feed.weather[0].icon%>.png">
+	 <!--  	<p><%- feed.weather[0].main %></p> -->
+	  	<p><%- feed.weather[0].description %></p>
+	  	
+
+		<p><span>Ранок</span>  	 <br><%- feed.temp.morn %>  C  &deg  <br>
+		<span>День</span>  	 <br><%- feed.temp.day %>   C  &deg  <br>
+		<span>Вечір</span>    <br><%- feed.temp.eve %>   C  &deg  <br>
+		<span>Ніч</span>  	 <br><%- feed.temp.night %> C  &deg  <br>
+		<span>Вологість повітря</span> - <%- feed.humidity %> %   <br>
+		<span>Пориви вітру</span> - <%- feed.speed %> м/c         </p>
+
+		
+
+	</div>
+	<% }); %>
+
+
+
+
+	<script>
+				var numDay = document.getElementsByClassName("numDay");
+				// console.log(numDay.outerText);
+				
+function day(){
+				for(var i=0; i<numDay.length; i++){
+					var elem = numDay[i].outerText;
+
+
+					if(numDay[i].outerText == "0") {
+						numDay[i].innerHTML = "Неділя";
+					} else if(numDay[i].outerText == "1"){
+						numDay[i].innerHTML = "Понеділок";
+					}
+					else if(numDay[i].outerText == "2"){
+						numDay[i].innerHTML = "Вівторок";
+					}
+					else if(numDay[i].outerText == "3"){
+						numDay[i].innerHTML = "Середа";
+					}
+					else if(numDay[i].outerText == "4"){
+						numDay[i].innerHTML = "Четвер";
+					}
+					else if(numDay[i].outerText == "5"){
+						numDay[i].innerHTML = "П'ятниця";
+					}
+					else if(numDay[i].outerText == "6"){
+						numDay[i].innerHTML = "Cубота";
+					}
+					
+				numDay[0].innerHTML = "Сьогодні";
+				}
+
+}
+
+day();
+				
+
+	</script>
+</div>
+

@@ -1,0 +1,25 @@
+<% layout("index")%>
+
+
+<table>
+	<tr >
+	
+		<td width="200">
+		<form action="/search" method="post" name="form">
+			<label for="search">Пошук</label>
+			<input type="text" name="search">
+			<input type="submit" name="submit" value="search">
+		</form>
+		</td>
+			<td class="centerTable">
+
+				<%- body %>
+
+			</td>
+
+		<td width="200"></td>
+
+	</tr>
+
+</table>
+
